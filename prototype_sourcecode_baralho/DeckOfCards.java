@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
-public class DeckOfCards implements Cloneable {
+public abstract class DeckOfCards implements Cloneable {
 
    private List<Card> deck; // ArrayList usado como uma pilha de objetos
    private final int NUMBER_OF_CARDS = 52; // n�mero constante de Cards

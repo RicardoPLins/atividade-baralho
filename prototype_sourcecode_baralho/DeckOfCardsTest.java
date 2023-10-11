@@ -10,8 +10,6 @@ public class DeckOfCardsTest {
       DeckOfCardsSueca Cartas = new DeckOfCardsSueca();
       
 
-      
-      
 
       // imprime todas as 52 cartas na ordem em que elas s�o distribu�das
       System.out.println("Size: " + myDeckOfCards.size());

@@ -9,6 +9,8 @@ public class DeckOfCardsTest {
       
       DeckOfCardsSueca Cartas = new DeckOfCardsSueca();
       
+
+      
       
 
       // imprime todas as 52 cartas na ordem em que elas s�o distribu�das
@@ -31,6 +33,7 @@ public class DeckOfCardsTest {
          System.out.println(Cartas.get(i));
       }
       System.out.println("Tamanho do baralho da sueca: " + Cartas.size());
+      System.out.println("O trunfo é: "+ Cartas.mostrarTrunfo());
 
       System.out.println("Size: " + myDeckOfCards.size());
 

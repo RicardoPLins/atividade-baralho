@@ -1,11 +1,11 @@
 import java.util.List;
+import java.util.Random;
 
 public class DeckOfCardsSueca extends DeckOfCards {
 
+    List<Card> sueca = this.getDeck();
     public DeckOfCardsSueca() {
         super();
-        List<Card> sueca = this.getDeck();
-
         for (int i = 0; i < sueca.size(); i++) {
             Card c = sueca.get(i);
             if (c.getFace().equals("Eight") || c.getFace().equals("Nine") || c.getFace().equals("Ten")) {
@@ -26,5 +26,13 @@ public class DeckOfCardsSueca extends DeckOfCards {
                 c.setValue(0);
             }
         }
+
+        
     }
+    public Card mostrarTrunfo(){
+            Random random = new Random();
+            int i = random.nextInt(sueca.size());
+            Card c = sueca.get(i);
+            return c;
+        }
 }

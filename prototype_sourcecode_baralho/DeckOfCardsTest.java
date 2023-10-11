@@ -7,7 +7,8 @@ public class DeckOfCardsTest {
       DeckOfCards myDeckOfCards = new DeckOfCardsNormal();
       // myDeckOfCards.shuffle(); // coloca Cards em ordem aleat�ria
       
-      DeckOfCards Cartas = new DeckOfCardsSueca();
+      DeckOfCardsSueca Cartas = new DeckOfCardsSueca();
+      
       
 
       // imprime todas as 52 cartas na ordem em que elas s�o distribu�das

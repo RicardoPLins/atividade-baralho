@@ -60,12 +60,11 @@ public abstract class DeckOfCards implements Cloneable {
       this.randomNumbers = new Random();
    }
 
-   // Método clone() sobrescrito para criar uma cópia profunda do baralho
+   // Método clone() sobrescrito de acordo com o prototype
    @Override
    public Object clone() {
       try {
          DeckOfCards clonedDeck = (DeckOfCards) super.clone();
-         // Copia profunda dos objetos internos, no caso, os Cards
          clonedDeck.deck = new ArrayList<>();
          for (Card card : this.deck) {
             clonedDeck.deck.add(new Card(card.getFace(), card.getSuit(), card.getValue()));
@@ -73,7 +72,6 @@ public abstract class DeckOfCards implements Cloneable {
          clonedDeck.randomNumbers = new Random();
          return clonedDeck;
       } catch (CloneNotSupportedException e) {
-         // Nunca deve acontecer, já que DeckOfCards implementa Cloneable
          throw new InternalError(e.toString());
       }
    }
@@ -94,4 +92,7 @@ public abstract class DeckOfCards implements Cloneable {
       return deck.remove(i);
    }
 
-} // fim da classe DeckOfCards
+   public List<Card> getDeck() {
+      return deck;
+   }
+}
